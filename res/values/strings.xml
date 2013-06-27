@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, CalculaHipotecaActivity!</string>
+    <string name="app_name">CalculaHipoteca</string>
+    <string name="titulo">calculaHipoteca</string>
+    <string name="calccuota">Calcular cuota</string>
+    <string name="prestamosapedir">Préstamo a pedir (euros):</string>
+    <string name="vacio"></string>
+    <string name="tipodeinteres">Tipo de interés (%):</string>
+    <string name="anos">Años:</string>
+
+</resources>
