@@ -33,7 +33,7 @@ public class CalculaHipotecaActivity extends Activity {
             	final EditText editAnos=(EditText) findViewById(R.id.EditText02);
             	anos=editAnos.getText().toString();  
             	
-                final TextView txtCuota=(TextView) findViewById(R.id.textView2);
+                   final TextView txtCuota=(TextView) findViewById(R.id.textView2);
             	
             	if( prestamoapedir.matches("((-|\\+)?[0-9]+(\\.[0-9]+)?)+") ) {
             		double prestamo = Double.valueOf(prestamoapedir);
@@ -52,7 +52,7 @@ public class CalculaHipotecaActivity extends Activity {
             				txtCuota.setText( "Cuota mensual: " + Float.valueOf(twoDForm.format(cuotaObject)).toString() + "�" );
             			} else {
                         	AlertDialog.Builder builder = new AlertDialog.Builder(CalculaHipotecaActivity.this);
-                        	builder.setMessage("El valor de los a�os es err�neo! Tiene que ser un n�mero!")
+                        	builder.setMessage("El valor de los anyos es erroneo! Tiene que ser un numero!")
                         	       .setCancelable(false)
                         	       .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         	           public void onClick(DialogInterface dialog, int id) {                	        	   
@@ -62,7 +62,7 @@ public class CalculaHipotecaActivity extends Activity {
             			}
             		} else {
                     	AlertDialog.Builder builder = new AlertDialog.Builder(CalculaHipotecaActivity.this);
-                    	builder.setMessage("El valor del tipo de inter�s es err�neo! Tiene que ser un porcentaje!")
+                    	builder.setMessage("El valor del tipo de interes es erroneo! Tiene que ser un porcentaje!")
                     	       .setCancelable(false)
                     	       .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     	           public void onClick(DialogInterface dialog, int id) {                	        	   
@@ -72,7 +72,7 @@ public class CalculaHipotecaActivity extends Activity {
             		}
             	} else {
                 	AlertDialog.Builder builder = new AlertDialog.Builder(CalculaHipotecaActivity.this);
-                	builder.setMessage("El valor del pr�stamo es err�neo! Tiene que ser una cantidad en euros!")
+                	builder.setMessage("El valor del prestamo es erroneo! Tiene que ser una cantidad en euros!")
                 	       .setCancelable(false)
                 	       .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 	           public void onClick(DialogInterface dialog, int id) {                	        	   
