@@ -33,7 +33,7 @@ public class CalculaHipotecaActivity extends Activity {
             	final EditText editAnos=(EditText) findViewById(R.id.EditText02);
             	anos=editAnos.getText().toString();  
             	
-                   final TextView txtCuota=(TextView) findViewById(R.id.textView2);
+                    final TextView txtCuota=(TextView) findViewById(R.id.textView2);
             	
             	if( prestamoapedir.matches("((-|\\+)?[0-9]+(\\.[0-9]+)?)+") ) {
             		double prestamo = Double.valueOf(prestamoapedir);
