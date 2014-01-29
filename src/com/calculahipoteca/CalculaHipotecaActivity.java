@@ -1,7 +1,6 @@
 package com.calculahipoteca;
 
 import java.text.DecimalFormat;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -12,7 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class CalculaHipotecaActivity extends Activity {
-    /** Called when the activity is first created. */
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,10 +49,10 @@ public class CalculaHipotecaActivity extends Activity {
             				cuotatotal=(float) ((prestamo*interesmensual)/(100*(1-test)));
             				Float cuotaObject=new Float(cuotatotal);
             				DecimalFormat twoDForm = new DecimalFormat("#.##");
-            				txtCuota.setText( "Cuota mensual: " + Float.valueOf(twoDForm.format(cuotaObject)).toString() + "€" );
+            				txtCuota.setText( "Cuota mensual: " + Float.valueOf(twoDForm.format(cuotaObject)).toString() + "ï¿½" );
             			} else {
                         	AlertDialog.Builder builder = new AlertDialog.Builder(CalculaHipotecaActivity.this);
-                        	builder.setMessage("El valor de los años es erróneo! Tiene que ser un número!")
+                        	builder.setMessage("El valor de los aï¿½os es errï¿½neo! Tiene que ser un nï¿½mero!")
                         	       .setCancelable(false)
                         	       .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         	           public void onClick(DialogInterface dialog, int id) {                	        	   
@@ -63,7 +62,7 @@ public class CalculaHipotecaActivity extends Activity {
             			}
             		} else {
                     	AlertDialog.Builder builder = new AlertDialog.Builder(CalculaHipotecaActivity.this);
-                    	builder.setMessage("El valor del tipo de interés es erróneo! Tiene que ser un porcentaje!")
+                    	builder.setMessage("El valor del tipo de interï¿½s es errï¿½neo! Tiene que ser un porcentaje!")
                     	       .setCancelable(false)
                     	       .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     	           public void onClick(DialogInterface dialog, int id) {                	        	   
@@ -73,7 +72,7 @@ public class CalculaHipotecaActivity extends Activity {
             		}
             	} else {
                 	AlertDialog.Builder builder = new AlertDialog.Builder(CalculaHipotecaActivity.this);
-                	builder.setMessage("El valor del préstamo es erróneo! Tiene que ser una cantidad en euros!")
+                	builder.setMessage("El valor del prï¿½stamo es errï¿½neo! Tiene que ser una cantidad en euros!")
                 	       .setCancelable(false)
                 	       .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 	           public void onClick(DialogInterface dialog, int id) {                	        	   
