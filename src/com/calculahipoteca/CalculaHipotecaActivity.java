@@ -35,11 +35,11 @@ public class CalculaHipotecaActivity extends Activity {
             	
                     final TextView txtCuota=(TextView) findViewById(R.id.textView2);
             	
-            	if( prestamoapedir.matches("((-|\\+)?[0-9]+(\\.[0-9]+)?)+") ) {
+            	if (prestamoapedir.matches("((-|\\+)?[0-9]+(\\.[0-9]+)?)+")) {
             		double prestamo = Double.valueOf(prestamoapedir);
-            		if( tipodeinteres.matches("((-|\\+)?[0-9]+(\\.[0-9]+)?)+") ) {
+            		if (tipodeinteres.matches("((-|\\+)?[0-9]+(\\.[0-9]+)?)+")) {
             			float tipointeres=Float.valueOf(tipodeinteres);
-            			if( anos.matches("((-|\\+)?[0-9]+(\\.[0-9]+)?)+") ) {
+            			if (anos.matches("((-|\\+)?[0-9]+(\\.[0-9]+)?)+")) {
             				double numanos = Double.valueOf(anos);
             				//empieza el lio
             				float cuotatotal;
