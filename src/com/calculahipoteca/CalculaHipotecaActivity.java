@@ -31,25 +31,23 @@ public class CalculaHipotecaActivity extends Activity {
             	
             	String anos;
             	final EditText editAnos=(EditText) findViewById(R.id.EditText02);
-            	anos=editAnos.getText().toString();  
-            	
-                    final TextView txtCuota=(TextView) findViewById(R.id.textView2);
+            	anos = editAnos.getText().toString();            	
+                final TextView txtCuota=(TextView) findViewById(R.id.textView2);
             	
             	if (prestamoapedir.matches("((-|\\+)?[0-9]+(\\.[0-9]+)?)+")) {
             		double prestamo = Double.valueOf(prestamoapedir);
             		if (tipodeinteres.matches("((-|\\+)?[0-9]+(\\.[0-9]+)?)+")) {
-            			float tipointeres=Float.valueOf(tipodeinteres);
+            			float tipointeres = Float.valueOf(tipodeinteres);
             			if (anos.matches("((-|\\+)?[0-9]+(\\.[0-9]+)?)+")) {
             				double numanos = Double.valueOf(anos);
-            				//empieza el lio
             				float cuotatotal;
-            				float interesmensual=tipointeres/12;
-            				double numeses=numanos*12;
-            				float test=(float) Math.pow( (1+(interesmensual/100)) , ((-1)*(numeses)) );
-            				cuotatotal=(float) ((prestamo*interesmensual)/(100*(1-test)));
-            				Float cuotaObject=new Float(cuotatotal);
+            				float interesmensual = tipointeres/12;
+            				double numeses = numanos * 12;
+            				float test = (float) Math.pow((1+(interesmensual/100)), ((-1)*(numeses)));
+            				cuotatotal = (float) ((prestamo*interesmensual)/(100*(1-test)));
+            				Float cuotaObject = new Float(cuotatotal);
             				DecimalFormat twoDForm = new DecimalFormat("#.##");
-            				txtCuota.setText( "Cuota mensual: " + Float.valueOf(twoDForm.format(cuotaObject)).toString() + "�" );
+            				txtCuota.setText("Cuota mensual: " + Float.valueOf(twoDForm.format(cuotaObject)).toString() + "€");
             			} else {
                         	AlertDialog.Builder builder = new AlertDialog.Builder(CalculaHipotecaActivity.this);
                         	builder.setMessage("El valor de los anyos es erroneo! Tiene que ser un numero!")
@@ -68,7 +66,7 @@ public class CalculaHipotecaActivity extends Activity {
                     	           public void onClick(DialogInterface dialog, int id) {                	        	   
                     	           }
                     	       });
-                    	builder.show();               			
+                    	builder.show();
             		}
             	} else {
                 	AlertDialog.Builder builder = new AlertDialog.Builder(CalculaHipotecaActivity.this);
@@ -79,10 +77,8 @@ public class CalculaHipotecaActivity extends Activity {
                 	           }
                 	       });
                 	builder.show();              		
-            	}
-                
+            	}                
             }
-        });        
-        
+        });
     }
 }
